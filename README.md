@@ -49,6 +49,17 @@ Under consideration. Here are some ideas I’m thinking about including:
 - Implement the contact form.
 - Work on SEO optimization.
 
+# Getting Started with Create React App
+
+To view the project, use the following command:
+
+### `npm start`
+
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) in your browser to view it.
+
+For more details, visit the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+
 </details>
 
 ---
@@ -97,5 +108,16 @@ En cours de réflexion. Voici quelques idées que j'envisage d'intégrer :
 - Intégrer les projets avec leurs descriptions détaillées.
 - Implémenter le formulaire de contact.
 - Travailler sur l'optimisation du SEO.
+
+# Prise en Main avec Create React App
+
+Pour visualiser le projet, utilisez la commande suivante :
+
+### `npm start`
+
+Lance l'application en mode développement. Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur pour la visualiser.
+
+Pour plus de détails, consultez la [documentation de Create React App](https://facebook.github.io/create-react-app/docs/getting-started).
+
 
 </details>
