@@ -21,7 +21,7 @@ function Header() {
         </div>
     </div>   
 
-    <div className='flex justify-between items-center'>
+    {/* <div className='flex justify-between items-center'>
         <div className='flex flex-grow justify-center'>
             <nav className='bg-gray-800 text-white rounded-full border border-blue-900 mr-8 pl-4 py-3 px-6 mt-4'>
          <ul className='flex space-x-10'>
@@ -31,7 +31,7 @@ function Header() {
         </nav>
         </div>
         
-        </div>
+        </div> */}
      </>
   );
 }

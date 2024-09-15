@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Mon Portfolio de Développeuse Web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![lang-gb](https://img.shields.io/badge/lang--gb-blue?style=for-the-badge)](#developer-portfolio) | [![lang-fr](https://img.shields.io/badge/lang--fr-blue?style=for-the-badge)](#mon-portfolio-de-développeur)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+<details>
+<summary>Click on the arrow to expand the English version (lang-GB) ⬇️</summary>
 
-### `npm start`
+# Developer Portfolio
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Description
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Welcome to my portfolio that is in progress! This project aims at showing my background, skills, and the projects I’ve worked on. It is still under construction, and additional features will be added gradually.
 
-### `npm test`
+## Objectives
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Create a personal website to display my development skills.
+- Present several projects I’ve worked on.
+- Deploy the website online with a responsive design for optimal accessibility across all devices.
+- Optimize the code for better performance and SEO.
 
-### `npm run build`
+## Planned Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Here are the features I plan to include in my portfolio:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Personal introduction (biography, technical skills)
+- "Projects" section: display projects with descriptions, technologies used, and links to demos or code
+- Contact form to facilitate communication
+- Responsive design to adapt to mobile, tablet, and desktop devices
+- SEO optimization to improve the online visibility of the portfolio
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+Under consideration. Here are some ideas I’m thinking about including:
+- **HTML5**
+- **Framework/Library**: React, Tailwind CSS
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Current Progress
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Setting up the basic structure of the site with HTML, React, and Tailwind.
+- Initialization of the main sections: "Home", "Projects", "About", "Contact".
+- Started implementing responsive design.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Next Steps
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Add content to the various sections.
+- Integrate projects with detailed descriptions.
+- Implement the contact form.
+- Work on SEO optimization.
 
-## Learn More
+</details>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<details>
+<summary>Cliquez sur la flèche pour dérouler la version française (lang-FR) ⬇️</summary>
 
-### Code Splitting
+# Mon Portfolio de Développeuse Web
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Description
 
-### Analyzing the Bundle Size
+Bienvenue sur mon portfolio en cours de développement ! Ce projet a pour objectif de présenter mon parcours, mes compétences et les projets sur lesquels j'ai travaillé. Il est encore en construction, et certaines fonctionnalités seront ajoutées progressivement.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Objectifs
 
-### Making a Progressive Web App
+- Créer un site web personnel pour exposer mes compétences en développement.
+- Présenter quelques projets sur lesquels j'ai travaillé.
+- Déployer le site en ligne avec un design responsive pour une bonne accessibilité sur tous les appareils.
+- Optimiser le code pour de meilleures performances et un bon référencement SEO.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Fonctionnalités prévues
 
-### Advanced Configuration
+Voici les fonctionnalités que je prévois d'intégrer à mon portfolio :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Présentation personnelle (biographie, compétences techniques)
+- Section "Projets" : affichage des projets avec description, technologies utilisées et liens vers les démos ou le code
+- Formulaire de contact pour faciliter les échanges
+- Design responsive pour s'adapter aux mobiles, tablettes et ordinateurs
+- Optimisation SEO pour améliorer la visibilité du portfolio en ligne
 
-### Deployment
+## Technologies Utilisées
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+En cours de réflexion. Voici quelques idées que j'envisage d'intégrer :
+- **HTML5**
+- **Framework/Librairie** : React, Tailwind CSS
 
-### `npm run build` fails to minify
+## Progrès Actuel
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Mise en place de la structure de base du site avec HTML, React et Tailwind.
+- Initialisation des sections principales : "Accueil", "Projets", "À propos", "Contact".
+- Début de la mise en œuvre du design responsive.
+
+## Prochaines étapes
+
+- Ajouter du contenu aux différentes sections.
+- Intégrer les projets avec leurs descriptions détaillées.
+- Implémenter le formulaire de contact.
+- Travailler sur l'optimisation du SEO.
+
+</details>
