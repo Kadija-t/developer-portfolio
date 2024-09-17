@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import axios from "axios";
@@ -38,8 +39,11 @@ const Home = () => {
   const [homeData, setHomeData] = useState(null);
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle("dark", !isDarkMode);
+    setIsDarkMode(prevMode => {
+      const newMode = !prevMode;
+      document.body.classList.toggle("dark", newMode);
+      return newMode;
+    });
   };
 
   useEffect(() => {
@@ -60,7 +64,7 @@ const Home = () => {
 
   return (
     <>
-      <Header toggleDarkMode={toggleDarkMode} />
+      <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       <section
         id="home"
         className={`py-40 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}
@@ -74,11 +78,11 @@ const Home = () => {
               </div>
             </div>
             {Image?.data?.[0]?.attributes?.url && (
-              <div className="flex-1 max-w-md border-2 border-blue-500 rounded-lg p-4">
+              <div className="">
                 <img
                   src={`http://localhost:1337${Image.data[0].attributes.url}`}
                   alt={Title || "No caption available"}
-                  className="w-full h-auto rounded-lg"
+                  className="w-36 h-36 object-cover rounded-full border-4 border-blue-500"
                 />
               </div>
             )}
@@ -86,7 +90,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Other sections */}
       <section
         id="competences"
         className={`py-40 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}

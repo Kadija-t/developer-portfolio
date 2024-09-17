@@ -1,14 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BsMoon, BsSun } from 'react-icons/bs';
 
-function Header() {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
-    const toggleDarkMode = () => {
-        setIsDarkMode(!isDarkMode);
-        document.body.classList.toggle('dark', !isDarkMode);
-    };
-
+function Header({ toggleDarkMode, isDarkMode }) {
     return (
         <div className="p-4">
             <div className="flex justify-between items-center">
