@@ -1,7 +1,10 @@
 
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
+import Skills from "../components/Skills";
+import Project from "../components/Project";
 import axios from "axios";
+
 
 const renderBlock = (blocks) => {
   if (!blocks || blocks.length === 0) return null;
@@ -89,26 +92,18 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      <section
-        id="competences"
-        className={`py-40 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}
-      >
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Compétences</h2>
-          <p className="text-lg">Voici mes compétences...</p>
-        </div>
+      <section>
+          <Skills />
       </section>
-
       <section
-        id="projets"
-        className={`py-40 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}
-      >
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Projets</h2>
-          <p className="text-lg">Projets...</p>
-        </div>
-      </section>
+            id="projects"
+            className={`py-40 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}
+          >
+            <div className="container mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-4">Projets</h2>
+              <Project /> 
+            </div>
+          </section>
 
       <section
         id="contact"
