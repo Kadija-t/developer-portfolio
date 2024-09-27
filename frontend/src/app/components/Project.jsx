@@ -24,12 +24,14 @@ const Project = () => {
   if (!projects || projects.length === 0) return <p>No projects found.</p>;
 
   return (
-    <section id="projects" className="py-40 bg-gray-100 text-black">
+    <section id="projects" className="background">
+    {/* <section id="projects" className="py-40 bg-gray-100 dark:bg-gray-900 text-black dark:text-white"></section> */}
       <div className="container mx-auto text-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
           {projects.map(project => (
             <Card key={project.id} project={project} />
           ))}
+          
         </div>
       </div>
     </section>

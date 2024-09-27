@@ -96,7 +96,7 @@ const Home = () => {
           <Skills />
       </section>
       <section
-            id="projects"
+            id="projets"
             className={`py-40 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}
           >
             <div className="container mx-auto text-center">
