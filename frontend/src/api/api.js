@@ -15,7 +15,7 @@
 import axios from 'axios';
 
 //  backend déployé sur Heroku
-const API_URL = 'https://my-portfolio-backend.herokuapp.com';
+const API_URL = 'https://my-portfolio-dev-73b66405d644.herokuapp.com/';
 
 export const fetchHomeData = async () => {
   try {
