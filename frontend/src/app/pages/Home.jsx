@@ -5,10 +5,9 @@ import Skills from "../components/Skills";
 import Project from "../components/Project";
 import axios from "axios";
 
-
 const renderBlock = (blocks) => {
   if (!blocks || blocks.length === 0) return null;
-
+  const API_URL = process.env.REACT_APP_STRAPI_URL ;
   return blocks.map((block, index) => {
     switch (block.type) {
       case "paragraph":
@@ -27,7 +26,8 @@ const renderBlock = (blocks) => {
         return (
           <img
             key={index}
-            src={`http://localhost:1337${block.data?.attributes?.url || ""}`}
+            // src={`http://localhost:1337${block.data?.attributes?.url || ""}`}
+            src={`${API_URL}/${block.data?.attributes?.url || ""}`}
             alt={block.data?.attributes?.caption || "No caption available"}
           />
         );
@@ -40,7 +40,7 @@ const renderBlock = (blocks) => {
 const Home = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [homeData, setHomeData] = useState(null);
-
+  const API_URL = process.env.REACT_APP_STRAPI_URL ;
   const toggleDarkMode = () => {
     setIsDarkMode(prevMode => {
       const newMode = !prevMode;
@@ -52,7 +52,9 @@ const Home = () => {
   useEffect(() => {
     const fetchHomeData = async () => {
       try {
-        const { data } = await axios.get("http://localhost:1337/api/homes/1?populate=*");
+        // const { data } = await axios.get("http://localhost:1337/api/homes/1?populate=*");
+
+        const { data } = await axios.get(`${API_URL}/api/homes/1?populate=*`)
         setHomeData(data.data.attributes);
       } catch (error) {
         console.error("Error fetching home data:", error);
@@ -83,7 +85,7 @@ const Home = () => {
             {Image?.data?.[0]?.attributes?.url && (
               <div className="">
                 <img
-                  src={`http://localhost:1337${Image.data[0].attributes.url}`}
+                  src={`https://my-portfolio-dev-73b66405d644.herokuapp.com${Image.data[0].attributes.url}`}
                   alt={Title || "No caption available"}
                   className="w-36 h-36 object-cover rounded-full border-4 border-blue-500"
                 />

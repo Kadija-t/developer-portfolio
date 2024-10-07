@@ -5,11 +5,12 @@ import Card from './Card';
 const Project = () => {
   const [projects, setProjects] = useState([]);
   const [error, setError] = useState(null);
+  const API_URL = process.env.REACT_APP_STRAPI_URL ;
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get('http://localhost:1337/api/projects?populate=*');
+        const response = await axios.get(`${API_URL}/api/projects?populate=*`);
         setProjects(response.data.data);
       } catch (error) {
         console.error('Error fetching projects:', error.response ? error.response.data : error.message);
