@@ -62,6 +62,7 @@ const Home = () => {
     };
     fetchHomeData();
   }, []);
+  
 
   if (!homeData) return <p>Loading...</p>;
 
