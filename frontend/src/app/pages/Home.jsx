@@ -52,16 +52,14 @@ const Home = () => {
   useEffect(() => {
     const fetchHomeData = async () => {
       try {
-        // const { data } = await axios.get("http://localhost:1337/api/homes/1?populate=*");
-
-        const { data } = await axios.get(`${API_URL}/api/homes/1?populate=*`)
+        const { data } = await axios.get(`${API_URL}/api/homes/1?populate=*`);
         setHomeData(data.data.attributes);
       } catch (error) {
         console.error("Error fetching home data:", error);
       }
     };
     fetchHomeData();
-  }, []);
+  }, [API_URL]);
   
 
   if (!homeData) return <p>Loading...</p>;
@@ -70,8 +68,9 @@ const Home = () => {
 
   return (
     <>
+    {/*Home section */}
       <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-      <section
+      {/* <section
         id="home"
         className={`py-40 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}
       >
@@ -94,10 +93,36 @@ const Home = () => {
             )}
           </div>
         </div>
+      </section> */}
+   <section
+  id="home"
+  className={`py-40 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}
+>
+  <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+    {/* Description à gauche */}
+    <div className="flex-1 md:max-w-2xl border-2 border-blue-500 rounded-lg p-8">
+      <div className="description-content leading-relaxed space-y-6">
+        {renderBlock(Description)}
+      </div>
+    </div>
+            {Image?.data?.[0]?.attributes?.url && (
+              <div className="md:w-1/3 flex justify-center md:justify-end mt-8 md:mt-0">
+              {/* <div className=""> */}
+                <img
+                  src={`https://my-portfolio-dev-73b66405d644.herokuapp.com${Image.data[0].attributes.url}`}
+                  alt={Title || "No caption available"}
+                  className="w-48 h-48 object-cover rounded-full border-4 border-blue-500"
+                />
+              </div>
+            )}
+          </div>
+      
       </section>
+      {/*Skills section */}
       <section>
           <Skills />
       </section>
+      {/* Projects section */}
       <section
             id="projets"
             className={`py-40 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}
@@ -107,7 +132,7 @@ const Home = () => {
               <Project /> 
             </div>
           </section>
-
+{/*Contact section */}
       <section
         id="contact"
         className={`py-40 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}

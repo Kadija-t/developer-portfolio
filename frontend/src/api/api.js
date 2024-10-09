@@ -37,7 +37,7 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://my-portfolio-dev-73b
 export const fetchHomeData = async () => {
   try {
     // bonne route pour les données
-    const response = await axios.get(`${API_URL}/api/home`); 
+    const response = await axios.get(`${API_URL}/api/homes/1?populate=*`); 
     return response.data;
   } catch (error) {
     console.error('Erreur lors de la récupération des données de Home:', error);
