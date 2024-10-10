@@ -18,3 +18,12 @@ body.dark {
   background-color: #1f2937;
   color: #ffffff;
 }
+
+.gradient-bg-1 {
+  background: linear-gradient(90deg, rgba(234, 237, 242, 1) 0%, rgba(225, 228, 234, 1) 100%);
+}
+
+.gradient-bg-2 {
+  background: linear-gradient(90deg, rgb(228, 43, 144) 0%, rgb(170, 111, 111) 100%);
+}
+
