@@ -16,13 +16,13 @@ const Skills = () => {
     //removed white bg
     <section
       id="competences"
-      className="text-black dark:bg-gray-800 dark:text-white"
+      className="text-white dark:bg-gray-800 dark:text-white"
     >
       <div className="container mx-auto text-center">
         {/* <h2 className="text-3xl font-bold mb-8">Compétences</h2> */}
         <h2 className="text-3xl font-bold mb-8 animate__animated animate__fadeIn">Compétences</h2>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 text-black">
           {skills.map((skill, index) => (
             <div
               key={index}

@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+// import { useInView } from "react-intersection-observer";
 import Header from "../components/Header";
 import Skills from "../components/Skills";
 import Project from "../components/Project";
 import Contact from "../components/Contact";
 import axios from "axios";
+import Footer from "../components/Footer";
+import BackToTopButton from "../components/BackToTopButton";
+
 
 const Home = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -23,7 +26,8 @@ const Home = () => {
   useEffect(() => {
     const fetchHomeData = async () => {
       try {
-        const { data } = await axios.get(`${API_URL}/api/homes/1?populate=*`);
+        const { data } = await axios.get(`${API_URL}/api/homes/1?populate=*`);console.log('ok'
+        );
         setHomeData(data.data.attributes);
       } catch (error) {
         console.error("Error fetching home data:", error);
@@ -40,13 +44,13 @@ const Home = () => {
         case "paragraph":
           return (
             <p key={index}>
-              {block.children[0]?.text || "Pas de texte disponible"}
+              {block.children[0]?.text || "No text available"}
             </p>
           );
         case "heading":
           return (
             <h2 key={index}>
-              {block.children[0]?.text || "Pas de titre disponible"}
+              {block.children[0]?.text || "No heading text available"}
             </h2>
           );
         case "image":
@@ -54,7 +58,7 @@ const Home = () => {
             <img
               key={index}
               src={`${API_URL}/${block.data?.attributes?.url || ""}`}
-              alt={block.data?.attributes?.caption || "Pas de légende disponible"}
+              alt={block.data?.attributes?.caption || "No caption available"}
             />
           );
         default:
@@ -100,9 +104,12 @@ const Home = () => {
         </div>
       </section>
 
+       {/* Divider */}
+       <div className={`h-1 ${isDarkMode ? "bg-gray-600" : "bg-gray-300"}`}></div> {/* Ligne de séparation */}
+
       {/* Skills Section */}
-      {/* <section className={`py-20 ${isDarkMode ? "bg-gray-800 text-white" : "bg-pink-500 text-black"}`}> */}
-      <section className={`py-20 ${isDarkMode ? "bg-gray-800 text-white" : "bg-gradient-to-r from-teal-300 via-pink-300 to-yellow-400"}`}>
+      <section className={`py-20 ${isDarkMode ? "bg-gray-800 text-white" : "bg-gray-800 text-white"}`}>
+      {/* <section className={`py-20 ${isDarkMode ? "bg-gray-800 text-white" : "bg-gradient-to-r from-teal-300 via-pink-300 to-yellow-400"}`}> */}
 
         <div className="container mx-auto text-center">
           <Skills />
@@ -110,34 +117,42 @@ const Home = () => {
       </section>
 
       {/* Projects Section */}
-     <section id="projects" className={`py-20 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}> 
+     <section id="projets" className={`py-20 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}> 
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Projets</h2>
           <Project />
         </div>
       </section>
-
+ {/* Divider */}
+ <div id="apropos" className={`h-1 ${isDarkMode ? "bg-gray-600" : "bg-gray-300"}`}></div> {/* Ligne de séparation */}
       {/* About Section */}
-      {/* <section id="about" className={`py-20 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}> */}
-      <section className={`py-20 ${isDarkMode ? "bg-gray-800 text-white" : "bg-gradient-to-r from-teal-300 via-pink-300 to-yellow-400"}`}>
+      <section className={`py-40 ${isDarkMode ? "bg-gray-800 text-white" : "bg-gray-800 text-white"}`}>
+      {/* <section className={`py-20 ${isDarkMode ? "bg-gray-800 text-white" : "bg-gradient-to-r from-teal-300 via-pink-300 to-yellow-400"}`}> */}
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">À propos</h2>
-          <div className="flex-1 md:max-w-6xl border-2 border-blue-500 rounded-lg p-4 mx-4">
-            <p className="leading-relaxed">{renderBlock(Description)}</p>
+          <h2 className="text-3xl font-bold mb-4">À propos de moi!</h2>
+          <div className="md:max-w-4xl border-2 border-blue-500 rounded-lg p-4 mx-auto">
+          <p className="leading-relaxed text-center" style={{ lineHeight: "2.5", marginBottom: "1.5rem" }}>
+        {renderBlock(Description)}
+      </p>
+            {/* <p className="leading-relaxed text-center">{renderBlock(Description)}</p> */}
           </div>
         </div>
       </section>
+       {/* Divider */}
+       <div className={`h-1 ${isDarkMode ? "bg-gray-600" : "bg-gray-300"}`}></div> {/* Ligne de séparation */}
 
       {/* Contact Section */}
-      <section id="contact" className={`py-40 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}>
+      <section id="contact" className={`py-30 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}>
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Contact</h2>
+          {/* <h2 className="text-3xl font-bold mb-4">Contact</h2> */}
           <div className="container mx-auto px-4 text-center">
       <Contact />
     </div>
-          {/* Ajoute un formulaire de contact ici */}
         </div>
       </section>
+      <BackToTopButton isDarkMode={isDarkMode} />
+
+      <Footer />
     </>
   );
 };

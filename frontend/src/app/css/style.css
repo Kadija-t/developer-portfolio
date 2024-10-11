@@ -27,3 +27,41 @@ body.dark {
   background: linear-gradient(90deg, rgb(228, 43, 144) 0%, rgb(170, 111, 111) 100%);
 }
 
+
+
+.section-wave {
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 0; /* Ajuste le padding selon tes besoins */
+}
+
+.section-wave::before,
+.section-wave::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100px; /* Ajuste la hauteur de la vague */
+  background: inherit; /* Utilise le même fond que la section */
+}
+
+.section-wave::before {
+  top: -100px; /* Pousse la vague vers le haut */
+  background: #f8fafc; /* Change cette couleur selon le mode sombre/clair */
+  border-radius: 50%;
+}
+
+.section-wave::after {
+  bottom: -100px; /* Pousse la vague vers le bas */
+  background: #f8fafc; /* Change cette couleur selon le mode sombre/clair */
+  border-radius: 50%;
+}
+
+.section-dark {
+  background-color: #1f2937; /* Couleur de fond en mode sombre */
+}
+
+.section-light {
+  background-color: #ffffff; /* Couleur de fond en mode clair */
+}
+

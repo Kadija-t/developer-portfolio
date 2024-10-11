@@ -7,7 +7,7 @@ function Header({ toggleDarkMode, isDarkMode }) {
             <div className="flex justify-between items-center">
                 <h1 className=" text-3xl font-bold">Kadija.dev</h1>
                 <div className="flex flex-grow justify-center">
-                    <nav className="bg-gray-800 text-white rounded-full border border-blue-600 mr-18 pl-4 px-6 mt-2">
+                    <nav className="bg-gray-800 text-white rounded-full border border-blue-600 mr-28 pl-4 px-6 mt-2">
                         <ul className="flex space-x-10">
                             <li><a href="#accueil" className="text-white text-xl hover:text-blue-300">Accueil</a></li>
                             <li><a href="#competences" className="text-white text-xl hover:text-blue-300">Compétences</a></li>

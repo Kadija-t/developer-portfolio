@@ -19,7 +19,7 @@ const Project = () => {
     };
 
     fetchProjects();
-  }, []);
+  }, [API_URL]);
 
   if (error) return <p>{error}</p>;
   if (!projects || projects.length === 0) return <p>No projects found.</p>;
