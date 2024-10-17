@@ -10,7 +10,9 @@ const Project = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get(`${API_URL}/api/projects?populate=*`);
+         const response = await axios.get(`${API_URL}/api/projects?populate=*`);
+         console.log(response.data);
+
         setProjects(response.data.data);
       } catch (error) {
         console.error('Error fetching projects:', error.response ? error.response.data : error.message);
@@ -32,7 +34,7 @@ const Project = () => {
           {projects.map(project => (
             <Card key={project.id} project={project} />
           ))}
-          
+        
         </div>
       </div>
     </section>
