@@ -5,6 +5,7 @@
 
 body {
   font-family: 'Nunito', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Styles pour le mode clair */
@@ -29,58 +30,21 @@ body.dark {
 
 
 
-.section-wave {
-  position: relative;
-  overflow: hidden;
-  padding: 4rem 0; /* Ajuste le padding selon tes besoins */
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px); /* Commencer légèrement en haut */
+    opacity: 0; /* Commencer invisible */
+  }
+  to {
+    transform: translateY(0); /* Position finale */
+    opacity: 1; /* Rendre visible */
+  }
 }
 
-.section-wave::before,
-.section-wave::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 100px; /* Ajuste la hauteur de la vague */
-  background: inherit; /* Utilise le même fond que la section */
+.animate-slide-down {
+  animation: slideDown 0.7s ease forwards; /* Durée de l'animation et conserver l'état final */
 }
-
-.section-wave::before {
-  top: -100px; /* Pousse la vague vers le haut */
-  background: #f8fafc; /* Change cette couleur selon le mode sombre/clair */
-  border-radius: 50%;
-}
-
-.section-wave::after {
-  bottom: -100px; /* Pousse la vague vers le bas */
-  background: #f8fafc; /* Change cette couleur selon le mode sombre/clair */
-  border-radius: 50%;
-}
-
-.section-dark {
-  background-color: #1f2937; /* Couleur de fond en mode sombre */
-}
-
-.section-light {
-  background-color: #ffffff; /* Couleur de fond en mode clair */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
