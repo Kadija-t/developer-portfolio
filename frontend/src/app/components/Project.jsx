@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from './Card'; 
+import ModalProject from './ModalProject';  
+import { Button } from '@mui/material';
+
 
 const Project = () => {
   const [projects, setProjects] = useState([]);
   const [error, setError] = useState(null);
+  //const [selectedProject, setSelectedProject] = useState(null);
   const API_URL = process.env.REACT_APP_STRAPI_URL ;
 
   useEffect(() => {
@@ -26,6 +30,10 @@ const Project = () => {
   if (error) return <p>{error}</p>;
   if (!projects || projects.length === 0) return <p>No projects found.</p>;
 
+  // const handleOpen = (project) => {
+  //   setSelectedProject(project); // Mettre à jour le projet sélectionné
+  // };
+
   return (
     <section id="projects" className="background">
     {/* <section id="projects" className="py-40 bg-gray-100 dark:bg-gray-900 text-black dark:text-white"></section> */}
@@ -34,12 +42,23 @@ const Project = () => {
           
           {projects.map(project => (
             <Card key={project.id} project={project} />
+          
           ))}
+        </div>  
         
-        </div>
       </div>
+      
+      {/* Appeler ModalProject avec le projet sélectionné */}
+   {/*    {selectedProject && (
+        <ModalProject
+          open={!!selectedProject} // Vérifie si un projet est sélectionné
+          handleClose={() => setSelectedProject(null)} // Fermer la modal
+          project={selectedProject} // Passer le projet sélectionné
+        />
+      )} */}
     </section>
   );
 };
 
 export default Project;
+

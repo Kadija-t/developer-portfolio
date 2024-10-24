@@ -1,6 +1,6 @@
-
 import { FaGithub } from 'react-icons/fa';
 import Slider from './Slider';
+import ModalProject from './ModalProject';
 
 const Card = ({ project }) => {
   // Vérification si 'project' et 'project.attributes' existent
@@ -56,13 +56,17 @@ const Card = ({ project }) => {
 
 {/* Lien GitHub en dessous des tags */}
 {Url && (
-  <div className="mt-1 mb-2 flex items-center">
+  <div className="flex items-center justify-between">
+    <div className="flex items-center space-x-2">
     <FaGithub className="text-white mr-2" size={24} /> {/* Icône GitHub */}
     <a href={Url} target="_blank" rel="noopener noreferrer" className="text-white underline">
       View on GitHub
-    </a>
+    </a> 
+    </div>
+    <ModalProject />
   </div>
 )}
+ 
 
       </div>
     </div>
@@ -70,3 +74,4 @@ const Card = ({ project }) => {
 };
 
 export default Card;
+

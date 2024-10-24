@@ -114,6 +114,7 @@ const Home = () => {
       Projets<FaProjectDiagram className="inline-block mr-2 text-5xl" />
     </h2>
          <Project /> 
+         
 
         </div>
 
