@@ -9,11 +9,12 @@ import BackToTopButton from "../components/BackToTopButton";
 import About from "../components/About";
 import { FaProjectDiagram } from 'react-icons/fa'; 
 
+
 const Home = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [homeData, setHomeData] = useState(null);
   const API_URL = process.env.REACT_APP_STRAPI_URL;
-  const [isVisible, setIsVisible] = useState(false); // État pour gérer la visibilité
+  const [isVisible, setIsVisible] = useState(false); 
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => {
@@ -56,6 +57,7 @@ const Home = () => {
   if (!homeData) return <p>Loading...</p>;
 
   const { Title, Description, Image } = homeData;
+
 
   return (
     <>
@@ -111,9 +113,10 @@ const Home = () => {
       
       Projets<FaProjectDiagram className="inline-block mr-2 text-5xl" />
     </h2>
-        
-          <Project />
+         <Project /> 
+
         </div>
+
       </section>
 
       {/* Divider */}
@@ -133,9 +136,11 @@ const Home = () => {
           </div>
         </div>
       </section>
+   
       <BackToTopButton isDarkMode={isDarkMode} />
 
       <Footer />
+  
     </>
   );
 };
