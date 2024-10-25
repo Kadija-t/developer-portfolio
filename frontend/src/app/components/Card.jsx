@@ -37,7 +37,6 @@ const Card = ({ project }) => {
             {Title}
           </a>
         </h3>
-        <p className="mb-1">{Description || ""}</p>
 
         {/* Displaying tags */}
         <div className="mt-0 mb-1">

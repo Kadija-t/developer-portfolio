@@ -33,7 +33,7 @@ function ModalProject({ open, handleClose, project }) {
           <p className="mb-4 text-sm text-gray-600">{Description || 'Description non disponible'}</p>
 
           {/* Tags associés au projet */}
-          <h3 className="font-semibold mt-4">Tags</h3>
+          <h3 className="font-semibold mt-4">Stack</h3>
           <div className="flex flex-wrap mb-4">
             {tags.length > 0 ? (
               tags.map((tag, index) => (
@@ -47,7 +47,7 @@ function ModalProject({ open, handleClose, project }) {
           </div>
 
           {/* Informations supplémentaires sur le projet */}
-          <h3 className="font-semibold mt-4">Infos</h3>
+          <h3 className="font-semibold mt-4">Informations</h3>
           <p className="mb-4 text-sm text-gray-600">{Infos || 'Pas d\'informations disponibles'}</p>
 
           {/* Problématiques associées au projet */}
