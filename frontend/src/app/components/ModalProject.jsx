@@ -22,18 +22,18 @@ function ModalProject({ open, handleClose, project }) {
   return (
     <Modal open={open} onClose={handleClose}>
       {/* Box de la modal avec la couleur de fond et les nouvelles dimensions */}
-      <Box className="w-full max-w-[900px] p-6 bg-gray-100 rounded-lg shadow-xl mx-auto my-8 max-h-[90vh] overflow-hidden flex flex-col lg:flex-row">
+      <Box className="w-full max-w-[90vw] md:max-w-[750px] p-4 bg-gray-100 rounded-lg shadow-xl mx-auto my-8 max-h-[90vh] overflow-hidden sm: overflow-y-auto flex flex-col lg:flex-row">
         
         {/* Colonne gauche pour les informations textuelles */}
-        <div className="w-full lg:w-1/2 pr-6">
+        <div className="w-full lg:w-1/2 pr-4">
           {/* Titre du projet */}
-          <h2 className="text-2xl font-semibold mb-4">{Title || 'Titre non disponible'}</h2>
+          <h2 className="text-xl font-semibold mb-2">{Title || 'Titre non disponible'}</h2>
 
           {/* Description du projet */}
           <p className="mb-4 text-sm text-gray-600">{Description || 'Description non disponible'}</p>
 
           {/* Tags associés au projet */}
-          <h3 className="font-semibold mt-4">Stack</h3>
+          <h3 className="font-semibold mt-2">Stack</h3>
           <div className="flex flex-wrap mb-4">
             {tags.length > 0 ? (
               tags.map((tag, index) => (
@@ -47,15 +47,15 @@ function ModalProject({ open, handleClose, project }) {
           </div>
 
           {/* Informations supplémentaires sur le projet */}
-          <h3 className="font-semibold mt-4">Informations</h3>
+          <h3 className="font-semibold mt-2">Informations</h3>
           <p className="mb-4 text-sm text-gray-600">{Infos || 'Pas d\'informations disponibles'}</p>
 
           {/* Problématiques associées au projet */}
-          <h3 className="font-semibold mt-4">Problématiques</h3>
+          <h3 className="font-semibold mt-2">Problématiques</h3>
           <p className="mb-4 text-sm text-gray-600">{Problematic || 'Pas de problématiques disponibles'}</p>
 
           {/* Solutions associées au projet */}
-          <h3 className="font-semibold mt-4">Solutions</h3>
+          <h3 className="font-semibold mt-2">Solutions</h3>
           <p className="mb-4 text-sm text-gray-600">{Solution || 'Pas de solutions disponibles'}</p>
 
           {/* Bouton de fermeture de la modal */}
@@ -65,9 +65,9 @@ function ModalProject({ open, handleClose, project }) {
         </div>
 
         {/* Colonne droite pour le carrousel */}
-        <div className="w-full lg:w-1/2 lg:pl-6 flex flex-col items-center">
+        <div className="w-full lg:w-1/2 lg:pl-4 flex flex-col items-center">
           {/* Slider avec une ombre et une hauteur augmentée */}
-          <div className="h-[350px] w-full shadow-lg bg-white rounded-lg overflow-hidden mb-4">
+          <div className="h-[250px] sm:h-[300px] lg:h-[350px] w-full shadow-lg bg-white rounded-lg overflow-hidden mb-4">
             <Slider images={images} />
           </div>
 
