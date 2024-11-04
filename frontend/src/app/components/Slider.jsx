@@ -20,24 +20,6 @@ const Slider = ({ images }) => {
   }, [images]);
 
   return (
-    // <div className="relative w-full h-full">
-    //   {/* Slide container for the image */}
-    //   {images.length > 0 && (
-    //     <img 
-    //       src={images[currentIndex]} 
-    //       alt={`Image ${currentIndex + 1}`} 
-    //       className="w-full h-full object-contain"
-    //     />
-    //   )}
-    // <div className="relative w-full h-full">
-    // {/* Slide container for the image */}
-    // {images.length > 0 && (
-    //   <img 
-    //     src={images[currentIndex]} 
-    //     alt={`Image ${currentIndex + 1}`} 
-    //     className="w-full h-full object-cover" // Assurez-vous que object-cover est utilisé ici
-    //   />
-    // )}
       
     <div className="relative w-full h-full">
     {images.length > 0 && (

@@ -19,7 +19,7 @@ function Header({ toggleDarkMode, isDarkMode }) {
                             <li key={item}>
                                 <a 
                                     href={`#${item.toLowerCase()}`} 
-                                    className="text-xl hover:text-yellow-300 text-bold transition duration-300"
+                                    className="text-xl hover:text-white text-bold transition duration-300"
                                 >
                                     {item}
                                 </a>
@@ -29,7 +29,7 @@ function Header({ toggleDarkMode, isDarkMode }) {
                 </nav>
                 {/* Menu Burger */}
                 <div className="md:hidden flex items-center">
-                    <button onClick={handleMenuToggle} className="text-white hover:text-yellow-300">
+                    <button onClick={handleMenuToggle} className="text-white hover:text-white">
                         {isMenuOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
                     </button>
                 </div>
@@ -47,7 +47,7 @@ function Header({ toggleDarkMode, isDarkMode }) {
                                 <li key={item}>
                                     <a 
                                         href={`#${item.toLowerCase()}`} 
-                                        className={`block text-xl hover:text-yellow-300 transition duration-300 ${isDarkMode ? 'text-black' : 'text-white'}`}
+                                        className={`block text-xl hover:text-white transition duration-300 ${isDarkMode ? 'text-black' : 'text-white'}`}
                                     >
                                         {item}
                                     </a>
