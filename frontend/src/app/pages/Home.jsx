@@ -105,8 +105,8 @@ const Home = () => {
       {/* Projects Section */}
       <section id="projets" className={`py-20 ${isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"}`}>
         <div className="container mx-auto text-center">
-          <h2 className={`text-6xl font-extrabold mb-4 text-black p-4 rounded-lg uppercase tracking-wide drop-shadow-lg transition-transform duration-700 ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'}`}>
-            Projets <FaProjectDiagram className="inline-block mr-2 text-5xl" />
+          <h2 className={`text-6xl font-extrabold mb-4 p-4 rounded-lg uppercase tracking-wide drop-shadow-lg transition-transform duration-700 ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'}`}>
+            Projets <FaProjectDiagram className="inline-block mr-2 text-5xl text-purple-700" />
           </h2>
           <Project /> 
         </div>

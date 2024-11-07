@@ -13,13 +13,13 @@ function Header({ toggleDarkMode, isDarkMode }) {
         <header className={`p-6 ${isDarkMode ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white' : 'bg-gradient-to-r from-purple-600 to-blue-500 text-white'}`}>
             <div className="flex justify-between items-center max-w-screen-xl mx-auto">
                 <h1 className="text-4xl font-bold hover:text-black transition duration-300 lg:-mr-32">Kadija.dev</h1>
-                <nav className={`hidden md:flex md:text-balance flex-grow justify-center lg:space-x-10`}>
-                    <ul className="flex md:space-x-6 lg:space-x-10 ">
+                <nav className={`hidden md:flex md:text-balance flex-grow justify-center lg:space-x-10 `}>
+                    <ul className="flex md:space-x-6 lg:space-x-10">
                         {['Accueil', 'Compétences', 'Projets', 'À propos', 'Contact'].map((item) => (
                             <li key={item}>
                                 <a 
                                     href={`#${item.toLowerCase()}`} 
-                                    className="text-xl hover:text-white text-bold transition duration-300"
+                                    className="text-xl text-bold transition duration-300 hover:underline"
                                 >
                                     {item}
                                 </a>
@@ -47,7 +47,7 @@ function Header({ toggleDarkMode, isDarkMode }) {
                                 <li key={item}>
                                     <a 
                                         href={`#${item.toLowerCase()}`} 
-                                        className={`block text-xl hover:text-white transition duration-300 ${isDarkMode ? 'text-black' : 'text-white'}`}
+                                        className={`block text-xl hover:underline transition duration-300 ${isDarkMode ? 'text-black' : 'text-white'}`}
                                     >
                                         {item}
                                     </a>

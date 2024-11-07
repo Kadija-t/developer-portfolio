@@ -3,7 +3,7 @@ import { Modal, Box, Button } from '@mui/material';
 import Slider from './Slider';
 import { FaGithub } from 'react-icons/fa'; // Assurez-vous d'importer l'icône
 
-function ModalProject({ open, handleClose, project }) {
+function ModalProject({ open, handleClose, project}) {
   if (!project) return null;
 
   const { attributes } = project;
@@ -27,7 +27,7 @@ function ModalProject({ open, handleClose, project }) {
         {/* Colonne gauche pour les informations textuelles */}
         <div className="w-full lg:w-1/2 pr-4">
           {/* Titre du projet */}
-          <h2 className="text-xl font-semibold mb-2">{Title || 'Titre non disponible'}</h2>
+          <h2 className="text-xl text-black font-semibold mb-2">{Title || 'Titre non disponible'}</h2>
 
           {/* Description du projet */}
           <p className="mb-4 text-sm text-gray-600">{Description || 'Description non disponible'}</p>
