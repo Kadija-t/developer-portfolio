@@ -59,8 +59,11 @@ export default function About({ isDarkMode }) {
           
           
           <div className={`flex-1 text-left md:text-lg bg-white/60 p-8 border-4 border-yellow-500 rounded-lg shadow-2xl text-gray-800 leading-relaxed backdrop-blur-lg transition-opacity duration-700 ${isVisible ? 'opacity-100 animate-slide-down' : 'opacity-0'}`}>
+          <p className="text-xl">
+              💡 <em><strong>Mon  parcours? </strong></em> 
+            </p>
             <p className="text-2xl font-light mb-4">
-              💡 <strong>Après plusieurs années d'expérience dans l'éducation, j'ai transformé mes compétences en communication, gestion de projet et résolution de problèmes en véritables atouts dans mon nouveau parcours.</strong>
+               <strong>Après plusieurs années d'expérience dans l'éducation, j'ai transformé mes compétences en communication, gestion de projet et résolution de problèmes en véritables atouts dans mon nouveau métier.</strong>
             </p>
             <p className="text-xl">
               🚀 <em><strong>Ce qui me motive ? </strong></em> 
