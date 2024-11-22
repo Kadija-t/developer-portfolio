@@ -13,7 +13,6 @@ const Project = () => {
     const fetchProjects = async () => {
       try {
         const response = await axios.get(`${API_URL}/api/projects?populate=*`);
-        console.log(response.data.data);
         setProjects(response.data.data);
       } catch (error) {
         console.error('Error fetching projects:', error.response ? error.response.data : error.message);

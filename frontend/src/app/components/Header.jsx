@@ -12,7 +12,7 @@ function Header({ toggleDarkMode, isDarkMode }) {
     return (
         <header className={`p-6 ${isDarkMode ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white' : 'bg-gradient-to-r from-purple-600 to-blue-500 text-white'}`}>
             <div className="flex justify-between items-center max-w-screen-xl mx-auto">
-                <h1 className="text-4xl font-bold hover:text-black transition duration-300 lg:-mr-32">Kadija.dev</h1>
+                <h2 className="text-4xl font-bold hover:text-black transition duration-300 lg:-mr-32">Kadija.dev</h2>
                 <nav className={`hidden md:flex md:text-balance flex-grow justify-center lg:space-x-10 `}>
                     <ul className="flex md:space-x-6 lg:space-x-10">
                         {['Accueil', 'Compétences', 'Projets', 'À propos', 'Contact'].map((item) => (

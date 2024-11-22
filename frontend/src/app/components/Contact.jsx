@@ -43,7 +43,6 @@ export default function Contact() {
 
     const result = await response.json();
     if (result.success) {
-      console.log(result);
       setSuccessMessage("Votre message a bien été transmis.");
       setErrorMessage(""); // Réinitialiser le message d'erreur
       setFormData({ name: "", email: "", message: "" }); // Réinitialiser le formulaire
