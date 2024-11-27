@@ -63,7 +63,7 @@ export default function Contact() {
     <div className="flex justify-center items-center min-h-screen py-12 px-4 bg-white dark:bg-gray-800">
       <div className="max-w-2xl w-full h-full bg-white dark:bg-gray-900 shadow-xl rounded-lg p-10">
         <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">Formulaire de contact</h2>
-        <form onSubmit={handleSubmit}>
+        {/* <form onSubmit={handleSubmit}>
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
               Nom
@@ -111,7 +111,68 @@ export default function Contact() {
           >
             Envoyer le formulaire
           </button>
+        </form> */}
+        <form onSubmit={handleSubmit}>
+          <div className="mb-6">
+            <label className="block text-gray-700 dark:text-white text-sm font-bold mb-2" htmlFor="name">
+              Nom
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              placeholder="Entrez votre nom"
+              required
+              aria-required="true"
+              aria-describedby="name-help"
+              onChange={handleChange}
+              className="shadow-md appearance-none border border-gray-300 rounded w-full py-3 px-4 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            />
+            <p id="name-help" className="text-sm text-gray-600"></p>
+          </div>
+
+          <div className="mb-6">
+            <label className="block text-gray-700 dark:text-white text-sm font-bold mb-2" htmlFor="email">
+              E-mail
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              placeholder="Entrez votre email"
+              required
+              aria-required="true"
+              onChange={handleChange}
+              className="shadow-md appearance-none border border-gray-300 rounded w-full py-3 px-4 leading-tight focus:outline-none focus:shadow-outline bg-white"
+            />
+          </div>
+
+          <div className="mb-6">
+            <label className="block text-gray-700 dark:text-white text-sm font-bold mb-2" htmlFor="message">
+              Votre message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              placeholder="Entrez votre message"
+              required
+              aria-required="true"
+              onChange={handleChange}
+              className="shadow-md appearance-none border border-gray-300 rounded w-full py-3 px-4 leading-tight focus:outline-none focus:shadow-outline bg-white h-32"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-blue-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300"
+          >
+            Envoyer le formulaire
+          </button>
         </form>
+
         {successMessage && (
           <div className="mt-4 text-center text-green-600">
             {successMessage}

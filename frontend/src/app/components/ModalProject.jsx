@@ -37,7 +37,7 @@ function ModalProject({ open, handleClose, project}) {
           <div className="flex flex-wrap mb-4">
             {tags.length > 0 ? (
               tags.map((tag, index) => (
-                <span key={index} className="text-white bg-gray-400 rounded-full px-2 mb-1 mr-2 text-sm">
+                <span key={index} className="text-white bg-purple-700 rounded-full px-2 mb-1 mr-2 text-sm">
                   {tag}
                 </span>
               ))

@@ -50,7 +50,7 @@ const Card = ({ project }) => {
           {names.length > 0 ? (
             <div className="tags flex flex-wrap">
               {names.map((name, index) => (
-                <span key={index} className="text-white bg-gray-400 rounded-full px-2 mb-1 mt-0 py-1 text-sm md:text-xs lg:text-base mr-2">
+                <span key={index} className="text-white bg-purple-700 rounded-full px-2 mb-1 mt-0 py-1 text-sm md:text-xs lg:text-base mr-2">
                   {name} {/* Affiche le tag */}
                 </span>
               ))}

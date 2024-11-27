@@ -29,13 +29,22 @@ function Header({ toggleDarkMode, isDarkMode }) {
                 </nav>
                 {/* Menu Burger */}
                 <div className="md:hidden flex items-center">
-                    <button onClick={handleMenuToggle} className="text-white hover:text-white">
-                        {isMenuOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
-                    </button>
-                </div>
-                <button onClick={toggleDarkMode} className="bg-white text-gray-800 rounded-full p-2 hover:bg-gray-300 transition duration-300">
-                    {isDarkMode ? <BsSun size={20} /> : <BsMoon size={20} />}
+                <button 
+                    onClick={handleMenuToggle} 
+                    className="text-white hover:text-white" 
+                    aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"} // Ajoutez aria-label pour l'accessibilité
+                >
+                    {isMenuOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
                 </button>
+                </div>
+                <button
+                onClick={toggleDarkMode}
+                className="bg-white text-gray-800 rounded-full p-2 hover:bg-gray-300 transition duration-300"
+                aria-label={isDarkMode ? "Désactiver le mode sombre" : "Activer le mode sombre"}
+                >
+                {isDarkMode ? <BsSun size={20} /> : <BsMoon size={20} />}
+                </button>
+
             </div>
 
             {/* Menu déroulant pour mobile */}

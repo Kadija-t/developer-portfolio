@@ -52,7 +52,7 @@ export default function About({ isDarkMode }) {
           <div className="flex-shrink-0">
             <img 
               src={logoAbout} 
-              alt="Description de l'image"
+              alt="Avatar de Kadija travaillant sur ordinateur"
               className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-lg transition-transform duration-300 hover:scale-110 transform-gpu" 
             />
           </div>

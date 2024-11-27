@@ -79,7 +79,7 @@ const Home = () => {
                 src={Image.data[0].attributes.url.startsWith('http')
                   ? Image.data[0].attributes.url
                   : `${API_URL}${Image.data[0].attributes.url}`}
-                alt={Image.data[0].attributes.alternativeText || "Logo"}
+                alt={Image.data[0].attributes.alternativeText || "Logo du Portfolio de Kadija"}
                 className="w-64 h-64 object-cover rounded-full border-4 border-blue-500 transition-transform transition-opacity duration-300 ease-in-out hover:scale-110" 
               />
             </div>

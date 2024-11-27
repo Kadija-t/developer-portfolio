@@ -32,21 +32,23 @@ const Slider = ({ images }) => {
       {/* Show navigation only if there are multiple images */}
       {images.length > 1 && (
         <>
-          {/* Left Chevron */}
-          <button
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-200 transition duration-300"
-            onClick={handlePrev}
-          >
-            <i className="fa-solid fa-chevron-left"></i>
-          </button>
+             {/* Left Chevron */}
+            <button
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-200 transition duration-300"
+              onClick={handlePrev}
+              aria-label="Image précédente" // Décrit la fonction du bouton
+            >
+              <i className="fa-solid fa-chevron-left"></i>
+            </button>
 
-          {/* Right Chevron */}
-          <button
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-200 transition duration-300"
-            onClick={handleNext}
-          >
-            <i className="fa-solid fa-chevron-right"></i>
-          </button>
+            {/* Right Chevron */}
+            <button
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-gray-200 transition duration-300"
+              onClick={handleNext}
+              aria-label="Image suivante" // Décrit la fonction du bouton
+            >
+              <i className="fa-solid fa-chevron-right"></i>
+            </button>
         </>
       )}
 
