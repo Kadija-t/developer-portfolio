@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal, Box, Button } from '@mui/material';
 import Slider from './Slider';
-import { FaGithub } from 'react-icons/fa'; // Assurez-vous d'importer l'icône
+import { FaGithub } from 'react-icons/fa'; 
 
 function ModalProject({ open, handleClose, project}) {
   if (!project) return null;
@@ -33,7 +33,7 @@ function ModalProject({ open, handleClose, project}) {
           <p className="mb-4 text-sm text-gray-600">{Description || 'Description non disponible'}</p>
 
           {/* Tags associés au projet */}
-          <h3 className="font-semibold mt-2">Stack</h3>
+          <h3 className="font-semibold mt-2  dark:text-gray-600">Stack</h3>
           <div className="flex flex-wrap mb-4">
             {tags.length > 0 ? (
               tags.map((tag, index) => (
@@ -47,15 +47,15 @@ function ModalProject({ open, handleClose, project}) {
           </div>
 
           {/* Informations supplémentaires sur le projet */}
-          <h3 className="font-semibold mt-2">Informations</h3>
+          <h3 className="font-semibold mt-2  dark:text-gray-600">Informations</h3>
           <p className="mb-4 text-sm text-gray-600">{Infos || 'Pas d\'informations disponibles'}</p>
 
           {/* Problématiques associées au projet */}
-          <h3 className="font-semibold mt-2">Problématiques</h3>
+          <h3 className="font-semibold mt-2  dark:text-gray-600">Problématiques</h3>
           <p className="mb-4 text-sm text-gray-600">{Problematic || 'Pas de problématiques disponibles'}</p>
 
           {/* Solutions associées au projet */}
-          <h3 className="font-semibold mt-2">Solutions</h3>
+          <h3 className="font-semibold mt-2  dark:text-gray-600">Solutions</h3>
           <p className="mb-4 text-sm text-gray-600">{Solution || 'Pas de solutions disponibles'}</p>
 
           {/* Bouton de fermeture de la modal */}

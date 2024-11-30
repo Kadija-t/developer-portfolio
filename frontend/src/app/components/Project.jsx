@@ -28,7 +28,7 @@ const Project = () => {
 
   // Fonction pour ouvrir la modal avec le projet sélectionné
   const handleOpen = (project) => {
-    setSelectedProject(project); // Mettre à jour le projet sélectionné
+    setSelectedProject(project); 
   };
 
   return (
